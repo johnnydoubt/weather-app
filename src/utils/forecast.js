@@ -17,7 +17,13 @@ const forecast = (
         } else if (body.error) {
             callback('Unable to find location.', undefined)
         } else {
-            callback(undefined, `${body.daily.data[0].summary} Il fait actuellement ${body.currently.temperature} degrés. Il y a ${body.currently.precipProbability}% de chances de pluie.`)
+            callback(undefined,
+                `${body.daily.data[0].summary} 
+                Il fait actuellement ${body.currently.temperature} degrés. \n
+                Il y a ${body.currently.precipProbability}% de chances de pluie. \n
+                Température maximale de la journée: ${body.daily.data[0].temperatureHigh}. \n
+                Température minimale de la journée: ${body.daily.data[0].temperatureLow}. \n
+                `)
         }
     })
 }

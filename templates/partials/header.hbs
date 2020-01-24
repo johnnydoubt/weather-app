@@ -2,8 +2,7 @@
     <h1>{{title}}</h1>
 
     <div>
-        <a href="/">Weather</a>
-        <a href="/about">About</a>
-        <a href="/help">Help</a>
+        <a href="/" class="{{#if active.home}}active{{/if}}"><span>Weather</span></a>
+        <a href="/about" class="{{#if active.about}}active{{/if}}"><span>About</span></a>
     </div>
 </header>

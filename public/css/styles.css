@@ -1,56 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap');
+
 body {
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-
-    color: #333333;
-    font-family: arial;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
+	min-height: 100vh;
+	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	background-color: #314158;
+	color: #f0edff;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 16px;
 }
 
 .main-content {
-    flex-grow: 1;
+	flex-grow: 1;
+}
+
+.result-container {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 10px 80px;
+	margin: 30px 0;
+	border-radius: 2px;
+	border: 1px solid #878787;
+	text-align: center;
+}
+
+.img-container img {
+	filter: brightness(1.7);
+	flex: 1 0 50%;
+}
+
+#message-1 {
+	flex: 1 0 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#message-2 {
+	font-size: 20px;
 }
 
 footer {
-    border-top: 1px solid #eeeeee;
-    color: #888888;
-    margin-top: 16px;
-    padding: 16px 0;
+	border-top: 1px solid #eeeeee;
+	color: #888888;
+	margin-top: 16px;
+	padding: 16px 0;
 }
 
 header {
-    margin-top: 16px;
-    margin-bottom: 48px;
+	margin-top: 16px;
+	margin-bottom: 48px;
+	border-bottom: 1px solid #eeeeee;
+	padding: 16px 0;
+	text-align: center;
 }
 
 header a {
-    color: #888888;
-    margin-right: 16px;
-    text-decoration: none;
+	color: #888888;
+	margin-right: 16px;
+	text-decoration: none;
+}
+header a span {
+	padding: 16px;
+	border: 1px solid;
+}
+
+header a.active span {
+	color: #eeeeee;
+	border-color: #eeeeee;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
+	font-size: 64px;
+	color: #cda715;
 }
 
 .portrait {
-    width: 250px;
+	width: 250px;
+}
+
+form {
+	display: flex;
 }
 
 input {
-    border: 1px solid #cccccc;
-    padding: 8px;
+	border: 1px solid #cccccc;
+	padding: 8px;
+	flex: 1;
+	margin: 0 2px;
 }
 
 button {
-    cursor: pointer;
-    border: 1px solid #888888;
-    background: #888888;
-    color: white;
-    padding: 8px;
+	cursor: pointer;
+	border: 1px solid #cda715;
+	background: #cda715;
+	color: white;
+	padding: 8px;
 }

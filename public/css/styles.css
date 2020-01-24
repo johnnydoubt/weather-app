@@ -5,7 +5,12 @@ body {
 	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 	display: flex;
 	flex-direction: column;
-	background-color: #314158;
+	background: linear-gradient(
+			rgba(49, 65, 88, 0.92) 100%,
+			rgba(49, 65, 88, 0.92) 100%
+		),
+		url(../img/Empire_State_Building_Manhattan_New_York-min.jpg);
+	background-size: cover;
 	color: #f0edff;
 	max-width: 900px;
 	margin: 0 auto;
@@ -19,12 +24,33 @@ body {
 .result-container {
 	display: flex;
 	flex-wrap: wrap;
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.05);
 	padding: 10px 80px;
 	margin: 30px 0;
-	border-radius: 2px;
+	border-radius: 3px;
 	border: 1px solid #878787;
 	text-align: center;
+	display: none;
+}
+.result-container.populated {
+	display: block;
+}
+.loader-container {
+	width: 128px;
+	height: 128px;
+	position: absolute;
+	top: 55%;
+	left: 44%;
+	display: none;
+}
+
+.loader-container.active {
+	display: block;
+}
+
+svg path,
+svg rect {
+	fill: #eeeeee;
 }
 
 .img-container img {

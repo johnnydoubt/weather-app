@@ -48,7 +48,7 @@ app.get('/help', (req, res) => {
 app.get('/weather', (req, res) => {
 	if (!req.query.address) {
 		return res.send({
-			error: 'You must provide an address!'
+			error: 'Vous devez renseigner une adresse !'
 		});
 	}
 	geocode(
@@ -93,14 +93,14 @@ app.get('/help/*', (req, res) => {
 	res.render('404', {
 		title: '404',
 		errorText: 'Help article not found',
-		name: 'Cesar Tailleur'
+		name: 'César Tailleur'
 	});
 });
 app.get('*', (req, res) => {
 	res.render('404', {
 		title: '404',
 		errorText: 'Page not found',
-		name: 'Cesar Tailleur'
+		name: 'César Tailleur'
 	});
 });
 

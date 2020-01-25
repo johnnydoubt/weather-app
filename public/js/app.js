@@ -19,7 +19,6 @@ weatherForm.addEventListener('submit', e => {
 	fetch('/weather?address=' + location).then(response => {
 		response.json().then(data => {
 			if (data.error) {
-				console.log(data.error);
 				messageOne.textContent = data.error;
 			} else {
 				let img = document.createElement('img');
@@ -28,9 +27,9 @@ weatherForm.addEventListener('submit', e => {
 				imgContainer.appendChild(img);
 				messageOne.textContent = data.location;
 				messageTwo.textContent = data.forecast;
-				resultContainer.classList.add('populated');
-				loaderContainer.classList.remove('active');
 			}
+			resultContainer.classList.add('populated');
+			loaderContainer.classList.remove('active');
 		});
 	});
 });
